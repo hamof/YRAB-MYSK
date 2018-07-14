@@ -106,7 +106,7 @@ ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 	} else if (command === `vol`) {
 
 		if (!msg.member.voiceChannel) return msg.channel.send('??? ??? ???? ???? .');
-		if (!serverQueue) return msg.channel.send('?? ???? ??? ????.');
+		if (!serverQueue) return msg.channel.send('تم تعليت الصوت.');
 		if (!args[1]) return msg.channel.send(`:loud_sound: ????? ????? **${serverQueue.volume}**`);
 		serverQueue.volume = args[1];
 		serverQueue.connection.dispatcher.setVolumeLogarithmic(args[1] / 50);
